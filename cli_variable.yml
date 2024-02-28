@@ -1,9 +1,9 @@
 ---
 - name: my playbook for local variables
   hosts: all
-  vars_files: Ayush.yml
+  vars_files: seema.yml
   tasks:
-    - name: Task one provided by Ayush for cli varibale
+    - name: Task one provided by seema for cli varibale
       debug:
         msg: "{{URL}}"
 
