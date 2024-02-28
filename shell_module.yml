@@ -1,0 +1,10 @@
+---
+- name: this is my shell playboook
+  hosts: all
+  become: true
+  tasks:
+    - shell: echo "Welcome to demo file" >> /mnt/demo.txt
+    - name: This our first shell task
+      debug:
+        msg: "{{ansible_distribution}}"
+...
