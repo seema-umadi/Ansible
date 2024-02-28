@@ -8,3 +8,10 @@ install ansible on ansible master instance
 installation is done.
 generate ssh key= ssh-keygen
 on ansible master cd .ssh --> ll --> copy id_rsa.pub and paste it in nodes authorized_keys.
+create file to add private ip's of nodes --> touch inventry
+vim inventry add node machines pvt ip addr -> save
+eg. 10.0.0.11
+    10.3.9.7
+run command ---> ansible -i inventry all -m "shell" -a "touch devops"---> created a file devops on server machine
+
+command to run playbook ---> ansible-playbook -i inventry playbook.yml(playbookname)
