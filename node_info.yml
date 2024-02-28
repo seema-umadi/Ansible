@@ -1,0 +1,15 @@
+---
+- name: Only for node info
+  hosts: all
+  become: true
+  tasks:
+    - name: What is a gid of local user ?
+      debug:
+        msg: "{{ansible_user_gid}}"
+    - name: What is OS family ?
+      debug:
+        msg: "{{ansible_os_family}}"
+    - name: What is my anisble m/c id?
+      debug:
+        msg: "{{ansible_machine_id}}"
+...
