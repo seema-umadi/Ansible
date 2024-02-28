@@ -1,0 +1,10 @@
+Launch one instance as ansible master. launch multiple instance as a node. then ssh all instance. 
+install ansible on ansible master instance
+  $ sudo apt update
+  $ sudo apt install software-properties-common
+  $ sudo add-apt-repository --yes --update ppa:ansible/ansible
+  $ sudo apt install ansible
+  $ sudo ansible --version
+installation is done.
+generate ssh key= ssh-keygen
+on ansible master cd .ssh --> ll --> copy id_rsa.pub and paste it in nodes authorized_keys.
